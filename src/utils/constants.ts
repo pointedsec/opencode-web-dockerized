@@ -1,6 +1,6 @@
 // API Configuration
 export const API_CONFIG = {
-  BASE_URL: import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:4096',
+  BASE_URL: import.meta.env.VITE_API_BASE_URL ?? 'http://127.0.0.1:4096',
   TIMEOUT: 30000, // 30 seconds
   RETRY_ATTEMPTS: 3,
   RETRY_DELAY: 1000 // 1 second

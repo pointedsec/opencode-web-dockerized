@@ -14,7 +14,7 @@ export class EventStreamService {
   private baseUrl: string
 
   constructor(baseUrl: string = '') {
-    this.baseUrl = baseUrl || (import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:4096')
+    this.baseUrl = baseUrl !== '' ? baseUrl : (import.meta.env.VITE_API_BASE_URL ?? 'http://127.0.0.1:4096')
     
     // Expose debug object globally in development
     if (import.meta.env.DEV) {
