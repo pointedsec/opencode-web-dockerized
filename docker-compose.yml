@@ -23,7 +23,7 @@ services:
       - "${APP_PORT:-8080}:80"
     environment:
       BASIC_AUTH_USER: "${BASIC_AUTH_USER:-admin}"
-      BASIC_AUTH_PASSWORD: "${BASIC_AUTH_PASSWORD:-changeme}"
+      BASIC_AUTH_PASSWORD: "${BASIC_AUTH_PASSWORD}"
     depends_on:
       - opencode
     restart: unless-stopped
