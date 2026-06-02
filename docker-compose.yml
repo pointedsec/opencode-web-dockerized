@@ -1,8 +1,12 @@
 services:
+  # opencode AI server — internal only, NOT exposed to the host or internet.
+  # nginx (app service) reaches it via the internal Docker network.
   opencode:
     build:
       context: .
       dockerfile: Dockerfile.opencode
+    expose:
+      - "4096"
     volumes:
       - opencode-config:/root/.config/opencode
       - opencode-workspace:/workspace
